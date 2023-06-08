@@ -99,6 +99,11 @@
             "date": 1686238780980,
             "name": "G:\\Next Level Web Development\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-06-08-21-success.log",
             "hash": "d503ef0fd0b7835d4915a8c48b178564ffcca79cdf59ecc5c3f4e1e01b56813a"
+        },
+        {
+            "date": 1686240236895,
+            "name": "G:\\Next Level Web Development\\university-management-auth-service\\logs\\winston\\successes\\phu-2023-06-08-22-success.log",
+            "hash": "aaa4589c5dd1c9fd38a7114d9a770b51ff24e7597ae17ce21c198fcd1962f4c0"
         }
     ],
     "hashType": "sha256"
