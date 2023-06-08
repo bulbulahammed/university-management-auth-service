@@ -1,0 +1,12 @@
+Thu Jun 08 2023 20:45:22 } [PH university] error: 🚀globalErrorHandler ~ [
+  {
+    "code": "invalid_type",
+    "expected": "string",
+    "received": "undefined",
+    "path": [
+      "body",
+      "role"
+    ],
+    "message": "role is required"
+  }
+]
