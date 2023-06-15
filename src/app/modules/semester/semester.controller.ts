@@ -22,12 +22,10 @@ const createSemester = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-// Get All Semester
+// Get All Semester Controller
 const getAllSemesters = catchAsync(async (req: Request, res: Response) => {
   const filters = pick(req.query, academicSemesterFilterableField);
-
   const paginationOptions = pick(req.query, paginationFields);
-
   const result = await AcademicSemesterService.getAllSemesters(
     filters,
     paginationOptions
@@ -41,7 +39,21 @@ const getAllSemesters = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+// Get Single Semester Controller
+const getSingleSemester = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id;
+  const result = await AcademicSemesterService.getSingleSemester(id);
+
+  sendResponse<IAcademicSemester>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Semester Retrieved Successfully!',
+    data: result,
+  });
+});
+
 export const AcademicSemesterController = {
   createSemester,
   getAllSemesters,
+  getSingleSemester,
 };

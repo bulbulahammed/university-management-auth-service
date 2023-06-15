@@ -11,6 +11,9 @@ router.post(
   AcademicSemesterController.createSemester
 );
 
+// Get Single Semester Route
+router.get('/:id', AcademicSemesterController.getSingleSemester);
+
 // Get All Semester route
 router.get('/', AcademicSemesterController.getAllSemesters);
 

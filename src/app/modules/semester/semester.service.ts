@@ -66,9 +66,6 @@ const getAllSemesters = async (
 
   const whereConditions = andCondition.length > 0 ? { $and: andCondition } : {};
 
-  // TODO: Delete this line after apply Where Conditions
-  // const result = await AcademicSemester.find({ $and: andCondition })
-
   const result = await AcademicSemester.find(whereConditions)
     .sort(sortCondition)
     .skip(skip)
@@ -86,7 +83,16 @@ const getAllSemesters = async (
   };
 };
 
+// Get single Semester Service
+const getSingleSemester = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findById(id);
+  return result;
+};
+
 export const AcademicSemesterService = {
   createSemester,
   getAllSemesters,
+  getSingleSemester,
 };
