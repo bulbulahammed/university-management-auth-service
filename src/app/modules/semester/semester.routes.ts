@@ -10,10 +10,10 @@ router.post(
   validateRequest(AcademicSemesterValidation.createAcademicSemesterZodSchema),
   AcademicSemesterController.createSemester
 );
-
+// Update Single/Multiple Semester
+router.patch('/:id', AcademicSemesterController.updateSemester);
 // Get Single Semester Route
 router.get('/:id', AcademicSemesterController.getSingleSemester);
-
 // Get All Semester route
 router.get('/', AcademicSemesterController.getAllSemesters);
 
